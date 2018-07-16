@@ -210,24 +210,9 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 } */
 
 
-/******************************************************************.
- * PARA O SW
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw/sw.js', {scope: '/.'}).then(function(reg) {
-    // registration worked
-    console.log('Registration succeeded. Scope is ' + reg.scope);
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-}
-*/
-
-
-/******************************************************************.
- * DO MOAHAMMED
-*/
+/**
+ * For the Service Worker
+ */
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js', {scope: '/'})
   .then((reg) => {
@@ -246,20 +231,3 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-
-
-/******************************************************************.
- * DO SITEPOINT
-
-if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('./sw.js')
-        .then(function (registration) {
-            console.log(registration);
-        })
-        .catch(function (e) {
-            console.error(e);
-        })
-} else {
-    console.log('Service Worker is not supported in this browser.');
-}
-*/
